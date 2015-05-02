@@ -11,16 +11,5 @@
     "express-extras": "^0.3.0",
     "mongodb": "^1.4.30",
     "mongoose": "^3.8.23",
-    "sha1": "^1.1.0"
-  },
-  "devDependencies": {
-    "chai": "^2.0.0",
-    "expect.js": "^0.3.1",
-    "express-session": "^1.10.3",
-    "jwt-simple": "^0.2.0",
-    "mocha": "^2.1.0",
-    "moment": "^2.9.0",
-    "superagent": "^0.17.0",
-    "supertest": "^0.15.0"
   }
 }
