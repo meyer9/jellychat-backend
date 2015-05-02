@@ -1,0 +1,19 @@
+{
+  "name": "jellychat-backend",
+  "version": "1.0.0",
+  "description": "backend for jellychat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmeyer2k/jellychat-backend"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmeyer2k/jellychat-backend/issues"
+  },
+  "homepage": "https://github.com/jmeyer2k/jellychat-backend"
+}
