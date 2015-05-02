@@ -12,6 +12,7 @@
     "express-extras": "^0.3.0",
     "jade": "^1.9.2",
     "mongodb": "^1.4.30",
-    "mongoose": "^3.8"
+    "mongoose": "^3.8",
+    "passport": "^0.2.1"
   }
 }
