@@ -1,22 +1,26 @@
 {
   "name": "jellychat-backend",
   "version": "1.0.0",
-  "description": "backend for jellychat app",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "test": "mocha --timeout 5000"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jmeyer2k/jellychat-backend"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jmeyer2k/jellychat-backend/issues"
-  },
-  "homepage": "https://github.com/jmeyer2k/jellychat-backend",
   "dependencies": {
-    "express": "^4.12.3"
+    "express": "~4.11.1",
+    "express-extras": "^0.3.0",
+    "mongodb": "^1.4.30",
+    "mongoose": "^3.8.23",
+    "sha1": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^2.0.0",
+    "expect.js": "^0.3.1",
+    "express-session": "^1.10.3",
+    "jwt-simple": "^0.2.0",
+    "mocha": "^2.1.0",
+    "moment": "^2.9.0",
+    "superagent": "^0.17.0",
+    "supertest": "^0.15.0"
   }
 }
