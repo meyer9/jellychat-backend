@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jmeyer2k/jellychat-backend/issues"
   },
-  "homepage": "https://github.com/jmeyer2k/jellychat-backend"
+  "homepage": "https://github.com/jmeyer2k/jellychat-backend",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
 }
