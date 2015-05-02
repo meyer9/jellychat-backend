@@ -10,6 +10,6 @@
     "express": "~4.11.1",
     "express-extras": "^0.3.0",
     "mongodb": "^1.4.30",
-    "mongoose": "^3.8.23",
+    "mongoose": "^3.8.23"
   }
 }
