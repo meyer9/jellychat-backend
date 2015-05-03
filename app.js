@@ -22,7 +22,7 @@ app.enable('trust proxy')
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 // app.use(logger('tiny'));
-app.use(extras.throttle());
+// app.use(extras.throttle());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(session({ secret: 'keyboard cat' }));
