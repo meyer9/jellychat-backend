@@ -1,6 +1,9 @@
 var extras = require('express-extras');
 var express = require('express');
 var path = require('path');
+var passport = require('passport')
+var LocalStrategy = require('passport-local').Strategy;
+var bodyParser = require('body-parser')
 
 var api = require('./routes/api');
 
@@ -19,6 +22,7 @@ app.enable('trust proxy')
 // app.use(logger('tiny'));
 app.use(extras.throttle());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json())
 
 app.use('/api', api);
 

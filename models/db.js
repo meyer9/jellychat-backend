@@ -2,7 +2,7 @@
 var mongoose = require( 'mongoose' );
 
 // Build the connection string
-var dbURI = 'mongodb://localhost/fulcrum';
+var dbURI = 'mongodb://localhost/jellychat';
 
 // Create the database connection
 mongoose.connect(dbURI);
@@ -34,5 +34,5 @@ process.on('SIGINT', function() {
 module.exports = mongoose
 
 // BRING IN YOUR SCHEMAS & MODELS // For example
-// require('./item.js');
-// require('./users.js');
+require('./user.js');
+require('./chat.js');

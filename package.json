@@ -7,15 +7,17 @@
     "test": "mocha --timeout 5000"
   },
   "dependencies": {
+    "body-parser": "^1.12.3",
+    "debug": "^2.1.3",
     "express": "~4.11.1",
     "express-extras": "^0.3.0",
     "mongodb": "^1.4.30",
-<<<<<<< Updated upstream
     "mongoose": "^3.8",
-    "passport": "^0.2.1"
-=======
-    "mongoose": "^3.8.23"
->>>>>>> Stashed changes
+    "passport": "^0.2.1",
+    "mongoose": "^3.9.7",
+    "passport": "^0.2.1",
+    "passport-create": "0.0.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^1.0.0"
   }
-
-}""""""""""""1````  `````                       67           }
+}
