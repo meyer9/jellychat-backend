@@ -28,30 +28,67 @@ passport.deserializeUser(User.deserializeUser());
 /*
 User Routes
 */
-router.post('/users/login',
+router.post('/users/login', function(req, res, next) {
   passport.authenticate('local', function(err, user, next) {
     if(err) {
-      req.send(500);
+      console.log(err);
+      res.status(500).send({
+        message: "Error logging in!"
+      });
     }
     if(!user) {
-      req.send(401);
+      res.status(401).send({
+        message: "Error logging in!"
+      });
     }
     if(user) {
-      req.send(200);
+      res.status(200).send({
+        message: "Logged in!"
+      });
     }
-  })
-);
+  })(req, res, next);
+});
 
 router.post('/users/create', function(req, res) {
-  console.log("create: " + req.body.username);
   User.register(new User({ username: req.body.username }), req.body.password, function(err) {
-    if (err) { console.log('error while user register!', err); return next(err); }
+    if (err) {
+      res.status(401).send({
+        message: "User already exists with this username!",
+        error: true
+      });
+      return;
+    }
 
     console.log('user registered!');
 
-    res.redirect('/');
+    res.status(200).send({
+      message: "Success!",
+      error: false
+    });
   });
 });
+
+router.post('/users/logout', function(req, res) {
+  req.logout();
+  res.status(200).send({
+    message: "Logged out!"
+  });
+});
+
+router.get('/users/loggedin', function(req, res) {
+  console.log("loggedin?")
+  if(req.user) {
+    res.status(200).send({
+      message: "Logged in!"
+    });
+    console.log("yes")
+  } else {
+    res.status(200).send({
+      message: "Not logged in!"
+    });
+    console.log("no")
+  }
+})
 
 console.log("loaded router")
 

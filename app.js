@@ -1,9 +1,12 @@
 var extras = require('express-extras');
 var express = require('express');
+var session = require('express-session')
 var path = require('path');
 var passport = require('passport')
 var LocalStrategy = require('passport-local').Strategy;
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+
 
 var api = require('./routes/api');
 
@@ -22,7 +25,11 @@ app.enable('trust proxy')
 // app.use(logger('tiny'));
 app.use(extras.throttle());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(session({ secret: 'keyboard cat' }));
+app.use(cookieParser());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/api', api);
 
