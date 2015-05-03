@@ -3,9 +3,10 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var chatSchema = new Schema({
-    chat: String,
+    message: String,
+    room: String,
     created: Date,
-    sentBy: [Schema.Types.ObjectId]
+    nick: String
 });
 
 var Chats = mongoose.model("Chat", chatSchema)
