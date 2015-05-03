@@ -22,9 +22,9 @@
 		<div class="chat-config">
 			<h1>Jelly Chat</h1>
 			<input type="text" class="chat-name" placeholder="Nickname"></br>
-			<input type="text" class="chat-room" placeholder="Room"></br>
+			<form onsubmit="submitForm(event)"><input type="text" class="chat-room" placeholder="Room"></br>
 			<p></p>
-			<button id="Start-Chat">Chat!</button>
+			<button id="Start-Chat">Chat!</button></form>
 		</div>
 
 		<div class="chat" hidden>

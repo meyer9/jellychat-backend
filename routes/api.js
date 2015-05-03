@@ -100,6 +100,7 @@ router.post("/chats/timeout", function(req, res) {
 
 })
 router.get("/chats/list", function(req, res) {
+  console.log("request")
   limit = req.query.limit || 50;
   if(!req.query.room) {
     res.status(500).send({
@@ -111,12 +112,13 @@ router.get("/chats/list", function(req, res) {
   }
   var query = Chat
     .find({ room: room })
-    .sort({ 'date': -1 })
+    .sort({ '_id': -1 })
     .limit(limit)
     .exec(function(err, chat) {
       if(!err) {
         res.status(200).send(chat)
       } else {
+        console.log("error")
         res.status(500).send({
           message: "Internal Server Error!"
         });
