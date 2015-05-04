@@ -22,13 +22,14 @@ app.enable('trust proxy')
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 // app.use(logger('tiny'));
-app.use(extras.throttle());
+// app.use(extras.throttle()); // too much throttle (for now)
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(session({ secret: 'keyboard cat' }));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(extras.fixIP());
 
 app.use('/api', api);
 

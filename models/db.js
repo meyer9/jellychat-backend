@@ -36,3 +36,5 @@ module.exports = mongoose
 // BRING IN YOUR SCHEMAS & MODELS // For example
 require('./user.js');
 require('./chat.js');
+require('./channel.js');
+require('./timeout.js')
