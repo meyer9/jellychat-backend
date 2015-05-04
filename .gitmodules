@@ -1,0 +1,3 @@
+[submodule "jellychat-frontend"]
+	path = jellychat-frontend
+	url = https://github.com/actuallySeth/jellychat-frontend

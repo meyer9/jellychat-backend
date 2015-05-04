@@ -23,7 +23,7 @@ app.enable('trust proxy')
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 // app.use(logger('tiny'));
 // app.use(extras.throttle()); // too much throttle (for now)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(path.join(__dirname, 'jellychat-frontend'), 'web')));
 app.use(bodyParser.json());
 app.use(session({ secret: 'keyboard cat' }));
 app.use(cookieParser());
